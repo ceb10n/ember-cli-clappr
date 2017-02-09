@@ -7,6 +7,6 @@ export default Ember.Component.extend({
   classNames: ['player'],
   source: '',
   didInsertElement() {
-    new Clappr.Player({source: "", parentId: ".player"});
+    new Clappr.Player({source: this.get('source'), parentId: ".player"});
   }
 });
