@@ -1,6 +1,6 @@
 import Ember from 'ember';
 import layout from '../templates/components/clappr-player';
-import Clappr from 'clappr';
+import Clappr from 'bower_components/clappr/dist/clappr.js';
 
 export default Ember.Component.extend({
   layout,
