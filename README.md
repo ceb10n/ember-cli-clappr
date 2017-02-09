@@ -1,8 +1,23 @@
 # ember-cli-clappr
 
-This README outlines the details of collaborating on this Ember addon.
+A simple wrapper to Clappr video player. For more information about *Clappr*,
+please visit [https://github.com/clappr/clappr](https://github.com/clappr/clappr).
 
-## Installation
+## Usage
+
+Insert
+
+```javascript
+{{clappr-player source="your_video_here.mp4"}}
+```
+
+## Example
+
+Please, see [ember-cli-clappr-example](https://github.com/ceb10n/ember-cli-clappr-example)
+
+## Contribute
+
+### Installation
 
 * `git clone <repository-url>` this repository
 * `cd ember-cli-clappr`

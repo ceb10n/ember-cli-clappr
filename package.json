@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-clappr",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Ember wrapper for clappr.",
   "keywords": [
     "ember-addon",
@@ -10,12 +10,12 @@
     "wrapper"
   ],
   "license": "MIT",
-  "author": "",
+  "author": "Rafael de Oliveira Marques",
   "directories": {
     "doc": "doc",
     "test": "tests"
   },
-  "repository": "",
+  "repository": "https://github.com/ceb10n/ember-cli-clappr.git",
   "scripts": {
     "build": "ember build",
     "start": "ember server",
