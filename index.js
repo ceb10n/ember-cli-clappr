@@ -16,7 +16,7 @@ module.exports = {
     var bowerDir = target.bowerDirectory;
     target.import(bowerDir + '/clappr/dist/clappr.js');
 
-    app.import('vendor/clappr.js', {
+    target.import('vendor/clappr.js', {
       exports: {
         Clappr: ['default']
       }
