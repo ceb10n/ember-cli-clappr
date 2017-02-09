@@ -1,9 +1,13 @@
 {
   "name": "ember-cli-clappr",
   "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "Ember wrapper for clappr.",
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "clappr",
+    "video",
+    "player",
+    "wrapper"
   ],
   "license": "MIT",
   "author": "",
