@@ -3,9 +3,13 @@
 A simple wrapper to Clappr video player. For more information about *Clappr*,
 please visit [https://github.com/clappr/clappr](https://github.com/clappr/clappr).
 
-## Usage
+## Installation
 
-Insert
+```
+ember install ember-cli-clappr
+```
+
+## Usage
 
 ```javascript
 {{clappr-player source="your_video_here.mp4"}}
@@ -14,6 +18,12 @@ Insert
 ## Example
 
 Please, see [ember-cli-clappr-example](https://github.com/ceb10n/ember-cli-clappr-example)
+
+## More about Clappr
+
+- [Clappr Events API](https://github.com/clappr/clappr/blob/master/doc/API_EVENTS.md)
+
+- [Built-in Plugins & Embed Parameters](https://github.com/clappr/clappr/blob/master/doc/BUILTIN_PLUGINS.md)
 
 ## Contribute
 
