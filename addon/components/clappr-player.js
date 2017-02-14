@@ -15,22 +15,11 @@ export default Ember.Component.extend({
   mute: false,
   autoPlay: false,
   loop: false,
-  chromeless: false,
-  allowUserInteraction: false,
-  disableKeyboardShortcuts: true,
+  chromeless: true,
+  allowUserInteraction: true,
+  disableKeyboardShortcuts: false,
   watermark: '',
   audioOnly: false,
-
-  onReady: null,
-  onResize: null,
-  onPlay: null,
-  onPause: null,
-  onStop: null,
-  onEnded: null,
-  onSeek: null,
-  onError: null,
-  onTimeUpdate: null,
-  onVolumeUpdate:null,
 
   didInsertElement() {
     const options = {
@@ -50,46 +39,48 @@ export default Ember.Component.extend({
       events: {}
     };
 
-    if (this.get('onReady') !== null) {
-      options.events.onReady = this.get('onReady');
-    }
+    options.events.onReady = this.get('onReady');
+    options.events.onResize = this.get('onResize');
+    options.events.onPlay = this.get('onPlay');
+    options.events.onPause = this.get('onPause');
+    options.events.onStop = this.get('onStop');
+    options.events.onEnded = this.get('onEnded');
+    options.events.onSeek = this.get('onSeek');
+    options.events.onReady = this.get('onReady');
+    options.events.onError = this.get('onError');
+    options.events.onVolumeUpdate = this.get('onVolumeUpdate');
 
-    if (this.get('onResize') !== null) {
-      options.events.onResize = this.get('onResize');
-    }
-
-    if (this.get('onPlay') !== null) {
-      options.events.onPlay = this.get('onPlay');
-    }
-
-    if (this.get('onPause') !== null) {
-      options.events.onPause = this.get('onPause');
-    }
-
-    if (this.get('onStop') !== null) {
-      options.events.onStop = this.get('onStop');
-    }
-
-    if (this.get('onEnded') !== null) {
-      options.events.onEnded = this.get('onEnded');
-    }
-
-    if (this.get('onSeek') !== null) {
-      options.events.onSeek = this.get('onSeek');
-    }
-
-    if (this.get('onReady') !== null) {
-      options.events.onReady = this.get('onReady');
-    }
-
-    if (this.get('onError') !== null) {
-      options.events.onError = this.get('onError');
-    }
-
-    if (this.get('onVolumeUpdate') !== null) {
-      options.events.onVolumeUpdate = this.get('onVolumeUpdate');
-    }
-    
     this.set('player', new Clappr.Player(options));
-  }
+  },
+
+  onReady: function() {
+    this.sendAction('onReady');
+  },
+  onResize: function() {
+    this.sendAction('onResize');
+  },
+  onPlay: function() {
+    this.sendAction('onPlay');
+  },
+  onPause: function() {
+    this.sendAction('onPause');
+  },
+  onStop: function() {
+    this.sendAction('onStop');
+  },
+  onEnded: function() {
+    this.sendAction('onEnded');
+  },
+  onSeek: function() {
+    this.sendAction('onSeek');
+  },
+  onError: function() {
+    this.sendAction('onError');
+  },
+  onTimeUpdate: function() {
+    this.sendAction('onTimeUpdate');
+  },
+  onVolumeUpdate:function() {
+    this.sendAction('onVolumeUpdate');
+  },
 });
