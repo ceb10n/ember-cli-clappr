@@ -54,33 +54,33 @@ export default Ember.Component.extend({
   },
 
   onReady: function() {
-    this.sendAction('onReady');
+    this.sendAction();
   },
   onResize: function() {
-    this.sendAction('onResize');
+    this.sendAction();
   },
   onPlay: function() {
-    this.sendAction('onPlay');
+    this.sendAction();
   },
   onPause: function() {
-    this.sendAction('onPause');
+    this.send();
   },
   onStop: function() {
-    this.sendAction('onStop');
+    this.sendAction();
   },
   onEnded: function() {
-    this.sendAction('onEnded');
+    this.sendAction();
   },
   onSeek: function() {
-    this.sendAction('onSeek');
+    this.sendAction();
   },
   onError: function() {
-    this.sendAction('onError');
+    this.sendAction();
   },
   onTimeUpdate: function() {
-    this.sendAction('onTimeUpdate');
+    this.sendAction();
   },
   onVolumeUpdate:function() {
-    this.sendAction('onVolumeUpdate');
+    this.sendAction();
   },
 });
