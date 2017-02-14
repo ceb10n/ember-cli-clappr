@@ -1,3 +1,5 @@
+[![npm version](https://badge.fury.io/js/ember-cli-clappr.svg)](https://badge.fury.io/js/ember-cli-clappr) [![Ember Observer Score](https://emberobserver.com/badges/ember-cli-clappr.svg)](https://emberobserver.com/addons/ember-cli-clappr) 
+
 # ember-cli-clappr
 
 A simple wrapper to Clappr video player. For more information about *Clappr*,
