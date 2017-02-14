@@ -9,48 +9,17 @@ export default Ember.Component.extend({
   player: null,
 
   source: '',
-  poster: null,
+  poster: '',
   width: 640,
   height: 360,
   mute: false,
   autoPlay: false,
   loop: false,
-  chromeless: false,
+  chromeless: true,
   allowUserInteraction: true,
   disableKeyboardShortcuts: false,
-  watermark: null,
+  watermark: '',
   audioOnly: false,
-
-  onClapprReady: function() {
-    this.send('onReady');
-  },
-  onClapprResize: function() {
-    this.send('onResize');
-  },
-  onClapprPlay: function() {
-    this.send('onPlay');
-  },
-  onClapprPause: function() {
-    this.send('onPause');
-  },
-  onClapprStop: function() {
-    this.send('onStop');
-  },
-  onClapprEnded: function() {
-    this.send('onEnded');
-  },
-  onClapprSeek: function() {
-    this.send('onSeek');
-  },
-  onClapprError: function() {
-    this.send('onError');
-  },
-  onClapprTimeUpdate: function() {
-    this.send('onTimeUpdate');
-  },
-  onClapprVolumeUpdate:function() {
-    this.send('onVolumeUpdate');
-  },
 
   didInsertElement() {
     const options = {
@@ -70,50 +39,28 @@ export default Ember.Component.extend({
       events: {}
     };
 
-    options.events.onReady = this.get('onClapprReady');
-    options.events.onResize = this.get('onClapprResize');
-    options.events.onPlay = this.get('onClapprPlay');
-    options.events.onPause = this.get('onClapprPause');
-    options.events.onStop = this.get('onClapprStop');
-    options.events.onEnded = this.get('onClapprEnded');
-    options.events.onSeek = this.get('onClapprSeek');
-    options.events.onReady = this.get('onClapprReady');
-    options.events.onError = this.get('onClapprError');
-    options.events.onVolumeUpdate = this.get('onClapprVolumeUpdate');
+    options.events.onReady = this.get('onReady');
+    options.events.onResize = this.get('onResize');
+    options.events.onPlay = this.get('onPlay');
+    options.events.onPause = this.get('onPause');
+    options.events.onStop = this.get('onStop');
+    options.events.onEnded = this.get('onEnded');
+    options.events.onSeek = this.get('onSeek');
+    options.events.onReady = this.get('onReady');
+    options.events.onError = this.get('onError');
+    options.events.onVolumeUpdate = this.get('onVolumeUpdate');
 
     this.set('player', new Clappr.Player(options));
   },
 
-  actions: {
-    onReady: function() {
-      this.sendAction();
-    },
-    onResize: function() {
-      this.sendAction();
-    },
-    onPlay: function() {
-      this.sendAction();
-    },
-    onPause: function() {
-      this.sendAction();
-    },
-    onStop: function() {
-      this.sendAction();
-    },
-    onEnded: function() {
-      this.sendAction();
-    },
-    onSeek: function() {
-      this.sendAction();
-    },
-    onError: function() {
-      this.sendAction();
-    },
-    onTimeUpdate: function() {
-      this.sendAction();
-    },
-    onVolumeUpdate:function() {
-      this.sendAction();
-    },
-  }
+  onReady: function() {},
+  onResize: function() {},
+  onPlay: function() {},
+  onPause: function() {},
+  onStop: function() {},
+  onEnded: function() {},
+  onSeek: function() {},
+  onError: function() {},
+  onTimeUpdate: function() {},
+  onVolumeUpdate:function() {},
 });
