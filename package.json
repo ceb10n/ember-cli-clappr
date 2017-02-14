@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-clappr",
-  "version": "0.0.15",
+  "version": "0.1.0",
   "description": "Ember wrapper for clappr.",
   "keywords": [
     "ember-addon",
