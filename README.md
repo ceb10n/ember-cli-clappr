@@ -15,6 +15,23 @@ ember install ember-cli-clappr
 {{clappr-player source="your_video_here.mp4"}}
 ```
 
+## Availabe Actions
+
+- onReady
+- onResize
+- onPlay
+- onPause
+- onStop
+- onEnded
+- onSeek
+- onError
+- onTimeUpdate
+- onVolumeUpdate:function
+
+```javascript
+{{clappr-player source="your_video_here.mp4" onPlay=(action 'onPlay')}}
+```
+
 ## Example
 
 Please, see [ember-cli-clappr-example](https://github.com/ceb10n/ember-cli-clappr-example)
