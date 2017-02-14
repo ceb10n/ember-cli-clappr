@@ -21,6 +21,37 @@ export default Ember.Component.extend({
   watermark: null,
   audioOnly: false,
 
+  onClapprReady: function() {
+    this.send('onReady');
+  },
+  onClapprResize: function() {
+    this.send('onResize');
+  },
+  onClapprPlay: function() {
+    this.send('onPlay');
+  },
+  onClapprPause: function() {
+    this.send('onPause');
+  },
+  onClapprStop: function() {
+    this.send('onStop');
+  },
+  onClapprEnded: function() {
+    this.send('onEnded');
+  },
+  onClapprSeek: function() {
+    this.send('onSeek');
+  },
+  onClapprError: function() {
+    this.send('onError');
+  },
+  onClapprTimeUpdate: function() {
+    this.send('onTimeUpdate');
+  },
+  onClapprVolumeUpdate:function() {
+    this.send('onVolumeUpdate');
+  },
+
   didInsertElement() {
     const options = {
       source: this.get('source'),
@@ -53,37 +84,6 @@ export default Ember.Component.extend({
     this.set('player', new Clappr.Player(options));
   },
 
-  onClapprReady: function() {
-    this.send('onReady');
-  },
-  onClapprResize: function() {
-    this.send('onResize');
-  },
-  onClapprPlay: function() {
-    this.send('onPlay');
-  },
-  onClapprPause: function() {
-    this.send('onPause');
-  },
-  onClapprStop: function() {
-    this.send('onStop');
-  },
-  onClapprEnded: function() {
-    this.send('onEnded');
-  },
-  onClapprSeek: function() {
-    this.send('onSeek');
-  },
-  onClapprError: function() {
-    this.send('onError');
-  },
-  onClapprTimeUpdate: function() {
-    this.send('onTimeUpdate');
-  },
-  onClapprVolumeUpdate:function() {
-    this.send('onVolumeUpdate');
-  },
-
   actions: {
     onReady: function() {
       this.sendAction();
@@ -95,7 +95,7 @@ export default Ember.Component.extend({
       this.sendAction();
     },
     onPause: function() {
-      this.send();
+      this.sendAction();
     },
     onStop: function() {
       this.sendAction();
